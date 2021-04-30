@@ -1,7 +1,7 @@
 #!/bin/bash
 is_seg=false
 
-git clone -b trainer --single-branch --depth 1 https://github.com/thaiminhpv/Doctor-Cyclop-Hackathon-2021
+git clone -b master --single-branch --depth 1 https://github.com/thaiminhpv/Doctor-Cyclop-Hackathon-2021
 mv ~/Doctor-Cyclop-Hackathon-2021 ~/Doctors-Cyclop
 
 if [ "$is_seg" = true ] ; then
