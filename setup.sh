@@ -19,7 +19,7 @@ else
   cp -rf /content/drive/MyDrive/output/resized_images.zip ~/Doctors-Cyclop/resources/input/resized_images.zip &&
   cd ~/Doctors-Cyclop/resources/input/ && unzip -q resized_images.zip && rm resized_images.zip && mv resized_images train_images || exit
 
-  cp -rf /pred_masks/pred_masks.zip ~/pred_masks.zip
+  cp -rf /content/drive/MyDrive/output/pred_masks.zip ~/pred_masks.zip
   unzip -qod ~/Doctors-Cyclop/resources/input/pred_masks ~/pred_masks.zip || exit
   rm ~/pred_masks.zip
 fi
