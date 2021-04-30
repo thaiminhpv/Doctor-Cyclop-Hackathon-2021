@@ -36,7 +36,3 @@ After this you should now have this at your Google Drive's root:
 - **When start Online Prediction Server as a service:** RestAPI is callable at `/`, you can `tmux` to this remote machine to get public API endpoint
 
 ![Online Prediction](readme-assets/images/RestAPI-Online-Prediction.png)
-
-## Authors
-- Phạm Vũ Thái Minh - [thaiminhpv](https://github.com/thaiminhpv)
-- Nguyễn Đình Anh - [D.A.N_3002](https://github.com/DAN3002)
