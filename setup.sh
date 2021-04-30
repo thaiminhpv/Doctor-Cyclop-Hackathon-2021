@@ -2,6 +2,7 @@
 is_seg=false
 
 git clone -b trainer --single-branch --depth 1 https://github.com/thaiminhpv/Doctor-Cyclop-Hackathon-2021
+mv ~/Doctor-Cyclop-Hackathon-2021 ~/Doctors-Cyclop
 
 if [ "$is_seg" = true ] ; then
   read -rsp 'kaggle.json: ' kaggle_json_file

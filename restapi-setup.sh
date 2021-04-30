@@ -1,5 +1,6 @@
 #!/bin/bash
 git clone -b trainer --single-branch --depth 1 https://github.com/thaiminhpv/Doctor-Cyclop-Hackathon-2021
+mv ~/Doctor-Cyclop-Hackathon-2021 ~/Doctors-Cyclop
 
 chmod 777 ~/Doctors-Cyclop/Trainer/install-dependency.sh
 ~/Doctors-Cyclop/Trainer/install-dependency.sh
