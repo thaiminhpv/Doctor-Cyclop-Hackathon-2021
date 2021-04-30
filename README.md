@@ -20,7 +20,7 @@ After done that you should have this at your Google Drive's root:
 
 ## 2. SSH to server
 
-- run [this notebook](https://colab.research.google.com/drive/1L-ibyztYYcM0rmuXkPihN8LHP0TxkRi4?usp=sharing) with GPU to create colab virtual machine *ssh-able*
+- run [this notebook](https://colab.research.google.com/drive/1L-ibyztYYcM0rmuXkPihN8LHP0TxkRi4?usp=sharing) with GPU enabled to create a Google Colab virtual machine
 - Copy file [setup.sh](setup.sh) or [restapi-setup.sh](restapi-setup.sh) to the newly created virtual machine (by `scp`)
 
 ## 3. Run
