@@ -1,0 +1,9 @@
+/.idea/
+/.vscode/
+/*/.vscode/
+/input/
+**/__pycache__/
+/resources/input/ranzcr-clip-catheter-line-classification/
+/resources/logs/**
+/resources/input/train_images/
+/resources/input/pred_masks/
