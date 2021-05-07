@@ -9,11 +9,27 @@ This is a Model implementation integrated with Web App, the dataset is got from 
 
 After researching and referring from discussions on Kaggle, here is our model solution:
 
-Our pipeline has 2 training stages:
-- Stage 1: Segmentation
-- Stage 2: Classification
+Our pipeline has 2 stages: **Segmentation** and **Classification**
 
-Then, the trained model's weights is stored in Google Drive, and will be mounted when running Online Prediction Service
+### Models:
+
+- **Stage 1**: Segmentation Model
+  - Using **Unet++** with **EfficientNet-B1** as backbone
+  - Train and validate on images with annotations
+  - For official segmentation annotation, we make 2 channel masks by drawing lines representing the tube, and drawing big dots indicating the tips of tubes.
+- **Stage 2**: Classification Model
+  - Using custom **EfficientNet-B1 trained with noisy student**
+  - Input has 5 channels (3 channels from original image, resized to 1024x1024 + 2 channels from predicted masks)
+  - Output is 12 classes: original 11 plus no-ETT, defined as whether all 3 ETT classes are 0
+  - Loss is weighted average of CE loss for the 4 ETT classes and BCE loss for the other 8 classes, with weight being 1:9
+
+### Training:
+
+After 5 folds Segmentation models are all trained with original dataset, we'll generate masks for all images, including those without annotation ones.
+
+We'll then use the predicted masks, and the images get resized to 1024x1024 as input to train stage 2 - classification models.
+
+Then, the trained model's weights in each fold are stored in Google Drive, and will be mounted when running Online Prediction Service
 
 ## How to Build and Run
 
