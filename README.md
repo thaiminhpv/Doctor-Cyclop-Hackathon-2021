@@ -7,6 +7,14 @@
 
 This is a Model implementation integrated with Web App, the dataset is got from the [RANZCR CLiP - Catheter and Line Position Challenge](https://www.kaggle.com/c/ranzcr-clip-catheter-line-classification)
 
+After researching and referring from discussions on Kaggle, here is our model solution:
+
+Our pipeline has 2 training stages:
+- Stage 1: Segmentation
+- Stage 2: Classification
+
+Then, the trained model's weights is stored in Google Drive, and will be mounted when running Online Prediction Service
+
 ## How to Build and Run
 
 ### 1. Mount folders at Google Drive
