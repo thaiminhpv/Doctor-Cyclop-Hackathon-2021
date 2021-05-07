@@ -30,13 +30,6 @@ def run(fold):
 
     model = SegModel(enet_type)
 
-    for parameter in model.parameters():
-        parameter.requires_grad = False
-    for parameter in model.seg.segmentation_head.parameters():
-        parameter.requires_grad = True
-    for parameter in model.seg.decoder.parameters():
-        parameter.requires_grad = True
-
     if is_resume_train:
         model_file = os.path.join(model_dir, f'{kernel_type}_best_fold{fold}_epo{resume_epoch - 1}.pth')
         model.load_state_dict(torch.load(model_file))

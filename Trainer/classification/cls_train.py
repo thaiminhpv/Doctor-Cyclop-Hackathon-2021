@@ -25,11 +25,6 @@ def run(fold):
     valid_loader = torch.utils.data.DataLoader(dataset_valid, batch_size=batch_size, shuffle=False, num_workers=num_workers, worker_init_fn=seed_worker)
 
     model = B1_ns(enet_type, num_classes)
-    # train only HEAD, freeze all others
-    for parameter in model.parameters():
-        parameter.requires_grad = False
-    for parameter in model.myfc.parameters():
-        parameter.requires_grad = True
 
     if is_resume_train:
         model_file = os.path.join(model_dir, f'{kernel_type}_best_fold{fold}_epo{resume_epoch - 1}.pth')
