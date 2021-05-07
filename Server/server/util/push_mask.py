@@ -6,15 +6,17 @@ import requests
 
 API_URL = 'http://18.140.53.169/api/uploadMaskImage'
 cmap = cm.get_cmap('viridis')
-    
+
+
 def push_mask_list(caseIds, imgs, masks):
     for i in range(len(caseIds)):
         print(caseIds[i])
-        push_mask(caseIds[i], imgs[i], masks[i][0]);
+        push_mask(caseIds[i], imgs[i], masks[i][0])
+
 
 def push_mask(caseId, img, mask):
     # img = cv2.resize(img, (1024, 1024))
-    img = img.cpu().numpy().transpose(1,2,0) * 255
+    img = img.cpu().numpy().transpose(1, 2, 0) * 255
     for i in range(1024):
         for j in range(1024):
             value = mask[i][j].item()

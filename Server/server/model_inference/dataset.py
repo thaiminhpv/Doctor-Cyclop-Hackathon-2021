@@ -4,7 +4,7 @@ import torch
 from torch.utils.data import Dataset
 
 
-class RANZCRDatasetTest(Dataset):
+class UserUploadDataset(Dataset):
     def __init__(self, df, images):
         self.df = df.reset_index(drop=True)
         self.images = images
