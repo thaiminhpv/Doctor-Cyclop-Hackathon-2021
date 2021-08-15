@@ -10,3 +10,4 @@ cp -rf /content/drive/MyDrive/output/trained-model-for-inference.zip ~/trained-m
 unzip -d ~/Doctors-Cyclop/resources/models ~/trained-model-for-inference.zip
 
 python3 ~/Doctors-Cyclop/Server/main.py
+
