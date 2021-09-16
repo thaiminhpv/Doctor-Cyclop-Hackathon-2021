@@ -3,6 +3,8 @@
 **Doctor's Cyclop** is one project of the **Phoenix team** in **FPT Edu Hackathon 2021**. This repository contains code of the model implementation. For the Web App, view 
 [Doctors-Cyclop-Webapp](https://github.com/DAN3002/Doctors-Cyclop-Webapp)
 
+![Online Prediction](readme-assets/images/RestAPI-Online-Prediction.png)
+
 # Introduction
 
 This is an AI Model based on UNet++ helps doctors rating the placements of tubes on chest X-Rays to save lives.
@@ -59,6 +61,4 @@ After this you should now have this at your Google Drive's root:
 ## 4. Note:
 - **When training:** Logs and checkpoints are automatically mounted at `%Your-Google-Drive-Root%/log/`
 
-- **When start Online Prediction Server as a service:** RestAPI is callable at `/`, you can `tmux` to this remote machine to get public API endpoint
-
-![Online Prediction](readme-assets/images/RestAPI-Online-Prediction.png)
+- **When start Online Prediction Server as a service:** RestAPI is callable at `/`, you can `ssh` to this remote machine then `tmux attach` to get public API endpoint
